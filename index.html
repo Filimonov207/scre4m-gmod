@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loading...</title>
+    <title>Horror Loading Screen</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css">
     <style>
         body {
@@ -43,32 +43,40 @@
 
         .game-mode {
             position: absolute;
-            bottom: 10px;
+            top: 10px;
             left: 50%;
             transform: translateX(-50%);
             background-color: rgba(0, 0, 0, 0.7);
             padding: 10px;
             border-radius: 5px;
         }
+
+        .welcome-text {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.5em;
+        }
     </style>
 </head>
 <body>
     <div class="corner-hint">Loading...</div>
-    <h1>Welcome to Woodsboro...</h1>
+    <div class="game-mode">
+        <img src="game_mode_icon.png" alt="Game Mode Icon" style="width: 50px; height: 50px;">
+        <p>Horror Mode</p>
+    </div>
+    <h1 class="welcome-text">Welcome to the Server</h1>
     <div id="slideshow">
-        <img src="img/image1.jpg">
+        <img src="image1.jpg">
     </div>
     <audio autoplay loop>
         <source src="horror_music.ogg" type="audio/ogg">
         Your browser does not support the audio element.
     </audio>
-    <div class="game-mode">
-        <img src="logo.png" alt="Scre4m Gamemode icon" style="width: 50px; height: 50px;">
-        <p>Scre4m: Gamemode</p>
-    </div>
     
     <script>
-        var images = ['img/image1.jpg'];
+        var images = ['image1.jpg', 'image2.jpg', 'image3.jpg'];
         var currentImage = 0;
 
         function showImage() {
